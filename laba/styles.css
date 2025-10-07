@@ -213,3 +213,94 @@ section p:first-of-type {
 .force-visible {
   visibility: visible !important;
 }
+
+/* ========== НОВІ СТИЛІ ДЛЯ СПИСКІВ ТА МЕНЮ ========== */
+
+/* Стилі для списків новин */
+.news-list {
+  list-style-position: inside;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.farm-list {
+  list-style-type: upper-alpha;
+  list-style-position: outside;
+  margin: 10px 0;
+}
+
+/* Стилі для програми лояльності */
+.loyalty-program {
+  margin: 15px 0;
+  background-color: #f8fcff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.program-level {
+  font-weight: bold;
+  color: #0047ab;
+  margin-top: 10px;
+}
+
+.program-desc {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* Стилі для маркера */
+.loyalty-program dt::before {
+  content: "★ ";
+  color: #ffcc00;
+}
+
+/* Стилі для marquee */
+.promo-marquee {
+  font-weight: bold;
+  color: #0047ab;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px dashed #2b7cff;
+}
+
+/* Стилі для навігаційного меню */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+/* Додаткові стилі для списків */
+ol.custom-counter {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+ol.custom-counter li {
+  counter-increment: section;
+  margin-bottom: 8px;
+}
+
+ol.custom-counter li::before {
+  content: counter(section) ". ";
+  font-weight: bold;
+  color: #2b7cff;
+}
+
+/* Стилі для маркованих списків з зображеннями */
+ul.image-list {
+  list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%232b7cff"/></svg>');
+  list-style-position: inside;
+}
+
+/* Стилі для головного контенту */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}

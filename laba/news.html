@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="author" content="Загаєвський Олександр (Студент)">
   <link rel="stylesheet" href="styles.css">
-
+    <link id="icon" rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjciIGZpbGw9IiMyYjdjZmYiLz4KPC9zdmc+" sizes="16x16" class="site-icon" charset="utf-8">
   <title>Новини — Веселий Молочник UA</title>
 </head>
 <body>
@@ -16,25 +16,47 @@
     </nav>
   </header>
 
-  <h1>Останні новини Веселий Молочник UA</h1>
+  <main>
+    <h1>Останні новини Веселий Молочник UA</h1>
 
-  <article>
-    <h2>Відкриття нового лінійного відділу упаковки</h2>
-    <time datetime="2025-09-01">1 вересня 2025</time>
-    <p>Ми інвестували в сучасну лінію упаковки для збереження свіжості продукції.</p>
-  </article>
+    <article>
+      <h2>Відкриття нового лінійного відділу упаковки</h2>
+      <time datetime="2025-09-01">1 вересня 2025</time>
+      <p>Ми інвестували в сучасну лінію упаковки для збереження свіжості продукції.</p>
+      <ul class="news-list" title="Переваги нової лінії" style="list-style-type: square;">
+        <li lang="uk">Підвищення швидкості пакування</li>
+        <li lang="uk">Поліпшення гігієни виробництва</li>
+        <li lang="uk">Зменшення витрат на упаковку</li>
+      </ul>
+    </article>
 
-  <article>
-    <h2>Партнерство з локальними фермами</h2>
-    <time datetime="2025-08-15">15 серпня 2025</time>
-    <p>Підписано договори з трьома новими постачальниками молока — це підтримає місцевих виробників і поліпшить якість сировини.</p>
-  </article>
+    <article>
+      <h2>Партнерство з локальними фермами</h2>
+      <time datetime="2025-08-15">15 серпня 2025</time>
+      <p>Підписано договори з трьома новими постачальниками молока — це підтримає місцевих виробників і поліпшить якість сировини.</p>
+      <ol type="A" class="farm-list" start="1" title="Нові партнери">
+        <li id="farm1" type="A">Ферма "Зелений Луг"</li>
+        <li id="farm2" type="A">Ферма "Сонячна Долина"</li>
+        <li id="farm3" type="A">Ферма "Еко-Молоко"</li>
+      </ol>
+    </article>
 
-  <article>
-    <h2>Запуск програми лояльності</h2>
-    <time datetime="2025-07-10">10 липня 2025</time>
-    <p>Клієнти отримають бонуси та знижки при купівлі продукції. Деталі будуть опубліковані найближчим часом.</p>
-  </article>
+    <article>
+      <h2>Запуск програми лояльності</h2>
+      <time datetime="2025-07-10">10 липня 2025</time>
+      <p>Клієнти отримають бонуси та знижки при купівлі продукції. Деталі будуть опубліковані найближчим часом.</p>
+      <dl class="loyalty-program">
+        <dt class="program-level" id="basic-level">Базова програма</dt>
+        <dd dir="ltr" class="program-desc">- 5% знижка на всі покупки</dd>
+        <dt class="program-level" id="premium-level">Преміум програма</dt>
+        <dd dir="ltr" class="program-desc">- 10% знижка + персональний менеджер</dd>
+      </dl>
+    </article>
+
+    <marquee title="Акційна пропозиція" class="promo-marquee" id="main-promo" bgcolor="#eaf1ff" vspace="5">
+      🔥 Спеціальна пропозиція: купуйте 2 упаковки йогурту - отримуйте третю в подарунок!
+    </marquee>
+  </main>
 
   <footer>
     <small>Автор сторінки: Загаєвський Олександр (вказано в &lt;meta name="author"&gt;)</small>
