@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Загаєвський Олександр (Студент)">
+  <link rel="stylesheet" href="styles.css">
+  <link id="icon" rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjciIGZpbGw9IiMyYjdjZmYiLz4KPC9zdmc+" sizes="16x16" class="site-icon" charset="utf-8">
+  <title>Зворотний зв'язок - Веселий Молочник UA</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="author.html">Автор</a>
+      <a href="about.html">Про фірму</a>
+      <a href="news.html">Новини</a>
+      <a href="products.html">Продукція</a>
+      <a href="feedback.html">Відгуки</a> </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Форма контролю якості та відгуків</h1>
+      <p>Ваша думка важлива для нас! Заповніть форму, щоб допомогти нам стати кращими.</p>
+
+      <form id="qualityForm" action="#" method="post" enctype="multipart/form-data" novalidate class="feedback-form" style="border-top: 3px solid #2b7cff;">
+
+        <fieldset>
+          <legend id="legend-contacts" class="form-legend" title="Розділ для контактів">Ваші контактні дані</legend>
+
+          <label for="fullName" id="label-name" style="font-weight: bold;">Ваше ім'я:</label>
+          <input type="text" id="fullName" name="fullName" required minlength="2" size="40" style="background-color: #f8fcff;">
+
+          <label for="email" style="font-weight: bold;">Ваш Email:</label>
+          <input type="email" id="email" name="email" required placeholder="name@example.com">
+
+          <label for="personal_site" style="font-weight: bold;">Ваш сайт (необов'язково):</label>
+          <input type="url" id="personal_site" name="personal_site" placeholder="https://example.com">
+        </fieldset>
+
+        <fieldset>
+          <legend>Інформація про продукт</legend>
+
+          <label for="product_search">Пошук продукту за назвою:</label>
+          <input type="search" id="product_search" name="product_search" list="products-datalist">
+          <datalist id="products-datalist" title="Список продуктів" style="display: none;" lang="uk">
+            <option value="Молоко 'Свіжий ранок'">
+            <option value="Йогурт 'Полуничний'">
+            <option value="Сир твердий 'Голландський'">
+            <option value="Кефір 'Класичний'">
+          </datalist>
+
+          <label for="batch_code">Код партії (формат: АА-1234):</label>
+          <input type="text" id="batch_code" name="batch_code" required pattern="[A-Z]{2}-\d{4}" title="Введіть код у форматі дві великі літери, дефіс, чотири цифри.">
+
+          <label for="purchase_date">Дата покупки:</label>
+          <input type="date" id="purchase_date" name="purchase_date" max="2025-10-18">
+
+          <label for="tasting_datetime">Дата і час дегустації:</label>
+          <input type="datetime-local" id="tasting_datetime" name="tasting_datetime">
+          
+          <label for="rating">Оцінка продукту (від 1 до 5):</label>
+          <input type="number" id="rating" name="rating" min="1" max="5" value="5">
+          <meter min="0" max="5" value="5" low="2" high="4" optimum="5"></meter>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Ваш відгук</legend>
+
+            <label>Тип звернення:</label>
+            <input type="radio" id="type_positive" name="feedback_type" value="positive"> <label for="type_positive">Позитивний</label>
+            <input type="radio" id="type_negative" name="feedback_type" value="negative"> <label for="type_negative">Негативний</label>
+            <br><br>
+
+            <label for="feedback_reason">Причина звернення (можна обрати декілька):</label>
+            <select id="feedback_reason" name="feedback_reason" multiple class="custom-select" lang="uk" dir="ltr" style="height: 120px;">
+                <optgroup label="Позитивні враження" title="Що сподобалось" style="font-style: italic;">
+                    <option value="taste">Чудовий смак</option>
+                    <option value="quality">Висока якість</option>
+                </optgroup>
+                <optgroup label="Негативні враження" title="Що не сподобалось">
+                    <option value="packaging">Пошкоджена упаковка</option>
+                    <option value="smell">Незвичний запах</option>
+                </optgroup>
+                <optgroup label="Технічні питання" disabled style="color: #999;" title="Ця група недоступна">
+                    <option value="tech">Проблеми з сайтом</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Відправка форми</legend>
+          
+          <label for="form_progress">Прогрес заповнення:</label>
+          <progress id="form_progress" value="70" max="100" class="form-progress" lang="uk" style="width: 100%;"></progress>
+          <br><br>
+
+          <input type="submit" value="Відправити відгук">
+          <input type="submit" value="Зберегти як чернетку" formaction="#" style="background-color: #777;">
+          <input type="button" value="Очистити форму" onclick="document.getElementById('qualityForm').reset()">
+          <button name="send_text" value="true" formenctype="text/plain">Відправити як текст</button>
+          <button name="disabled_button" disabled>Неактивна кнопка</button>
+        </fieldset>
+
+      </form>
+
+      <div class="form-outside-block">
+        <h3>Додаткові коментарі (поза формою)</h3>
+        <textarea id="extra_comments" form="qualityForm" rows="4" disabled lang="uk" title="Це поле наразі неактивне">Тут можна вводити додаткові коментарі...</textarea>
+        
+        <label for="final_output">Підсумок (для демонстрації output):</label>
+        <output name="final_output" for="rating" form="qualityForm" lang="uk" title="Ваша оцінка">5</output>
+      </div>
+
+      <details id="terms" lang="uk" title="Умови та положення">
+        <summary>Показати умови конфіденційності</summary>
+        <p>Надаючи свої дані, ви погоджуєтесь на їх обробку згідно з нашою політикою конфіденційності.</p>
+      </details>
+
+    </section>
+  </main>
+
+  <footer>
+    <small>Автор сторінки: Загаєвський Олександр (вказано в &lt;meta name="author"&gt;)</small>
+  </footer>
+</body>
+</html>
