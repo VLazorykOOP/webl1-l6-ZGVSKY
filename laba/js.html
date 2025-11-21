@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7 (Варіант 7)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="pageLoaded()" onresize="windowResized()">
+
+    <h1>Лабораторна робота №7. Варіант 7.</h1>
+    <div id="log-area" class="result-box" style="background: #eee; color: #555; font-size: 0.9em;">Лог подій: </div>
+
+    <section>
+        <h2>Завдання 2: Події тегів</h2>
+        
+        <h3 id="interactive-header" 
+            onclick="alert('Ви клікнули на заголовок!')"
+            onmouseover="this.style.color='red'; this.style.fontSize='24px';"
+            onmouseout="this.style.color='black'; this.style.fontSize='18.72px';">
+            Наведіть на мене мишу (H3) або клікніть
+        </h3>
+
+        <p>Текст зі звичайним <b id="bold-text" 
+            ondblclick="this.style.backgroundColor='yellow'; alert('Подвійний клік!')"
+            onmouseover="this.innerHTML='(КУРСОР ТУТ)'"
+            onmouseout="this.innerHTML='жирним виділенням'">
+            жирним виділенням
+        </b> (зробіть подвійний клік).</p>
+    </section>
+
+    <section>
+        <h2>Завдання 3 (Варіант 7): Робота з фреймами</h2>
+        <p>Натисніть кнопку, щоб змінити вміст двох фреймів знизу.</p>
+        
+        <iframe id="frame1" srcdoc="<p>Фрейм 1: Початковий вміст</p>"></iframe>
+        <iframe id="frame2" srcdoc="<p>Фрейм 2: Початковий вміст</p>"></iframe>
+        <br>
+        <button onclick="runTask3()">Run Task (Змінити фрейми)</button>
+    </section>
+
+    <section>
+        <h2>Завдання 4: Події миші на зображенні</h2>
+        <p>Наведіть мишу на зображення, щоб змінити його.</p>
+        <img src="C:\Users\User\Desktop\phone\photos\20250125_132501.jpg" alt="Test Image" 
+             onmouseover="this.style.opacity='0.5'; this.style.transform='scale(1.5)'; this.style.borderColor='red';"
+             onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.borderColor='#333';">
+    </section>
+
+    <section>
+        <h2>Завдання 5 (Варіант 7): Регулярні вирази</h2>
+        <p>Знайти слова, які починаються з літери <strong>«ш»</strong> та закінчуються буквою <strong>«а»</strong>.</p>
+        
+        <textarea id="regex-input">Школа - це чудова штука. Шпага гостра. Шапка тепла. Машина швидка. Штора.</textarea>
+        <br>
+        <button onclick="runTask5()">Знайти слова</button>
+        <div id="regex-result" class="result-box">Результат з'явиться тут...</div>
+    </section>
+
+    <section>
+        <h2>Завдання 6 (Варіант 7): Масиви</h2>
+        <p>Побудувати масив B з елементів масиву A, які <strong>більші за 10</strong>.</p>
+        
+        <button onclick="runTask6()">Array Task (Згенерувати та Обробити)</button>
+        <div id="array-result" class="result-box">Результат...</div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
